@@ -1,0 +1,42 @@
+#about {
+    margin-top: 210px;
+}
+
+.contentBlock {
+    color: white;
+
+    &__Hello {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    &__Name {
+        font-size: 2rem;
+    }
+
+    &__Profession {
+        font-size: 1rem;
+    }
+
+    &__Interview {
+        background-color:#161616;
+        border-radius: 32px;
+        padding: 8px 12px;
+
+        span {
+            color: #ff8b5a;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8rem;
+        }
+    }
+
+}
+
+.avatar {
+    position: absolute;
+    background-color: rgb(255, 0, 0,0.2);
+    top: -210px;
+    left: 20%; /* 50% - 60%/2 = 20% */
+    right: 20%; /* 50% - 60%/2 = 20% */
+    width: 60%;
+}
