@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import './Header.css';
+import './Header.css';
 
 function Header() {
     useEffect(() => {
@@ -62,7 +62,6 @@ function Header() {
         <header
             id="landing-header"
             className="
-                py-3 px-10
                 flex items-center
                 fixed top-0
                 w-full justify-between
