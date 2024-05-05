@@ -1,7 +1,7 @@
 function Experience() {
     return (
-        <div>
-            <p>Experience</p>
+        <div className="cardBlock">
+            <p className="text-white letter">Experience</p>
         </div>
     )
 }
