@@ -1,0 +1,17 @@
+/* 6, 68, 105 */
+
+.cardBlock {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgb(6, 68, 105,0.2);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px;
+    position: relative;
+    backdrop-filter: blur(2px);
+}
+
+@media (min-width: 475px) {
+    .cardBlock {
+        border-radius: 12px;
+    }
+}
