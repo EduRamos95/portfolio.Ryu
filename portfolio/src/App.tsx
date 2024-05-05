@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <body className="App__Body">
+      <div className="App__Body">
         <AboutMe/>
         <Skills/>
         <Experience/>
         <Projects/>
-      </body>
+      </div>
     </div>
   );
 }

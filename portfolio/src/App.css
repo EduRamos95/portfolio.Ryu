@@ -1,38 +1,20 @@
- /* .App {
-  background-color: red;
-} */
-/*
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import './Components/Commons/styles/cardBlock.css';
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+.App {
+    background-image: url("../public/imgs/background_dragon_1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-height: 100vh;
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App__Body {
+    padding-top: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.letter {
+    font-family: "Wallpoet", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
