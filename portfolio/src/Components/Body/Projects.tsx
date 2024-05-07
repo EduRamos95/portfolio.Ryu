@@ -1,6 +1,6 @@
 function Projects() {
     return (
-        <div className="cardBlock">
+        <div id="projects" className="cardBlock">
             <p className="text-white letter">Projects</p>
         </div>
     )
