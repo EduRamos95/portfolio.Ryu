@@ -7,11 +7,23 @@
     border-radius: 8px;
     margin: 16px;
     position: relative;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
 }
 
 @media (min-width: 475px) {
     .cardBlock {
-        border-radius: 12px;
+        border-radius: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cardBlock {
+        /* border-radius: 32px; */
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardBlock {
+        /* backdrop-filter: blur(6px); */
     }
 }
