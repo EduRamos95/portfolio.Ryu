@@ -1,7 +1,7 @@
 function Projects() {
     return (
         <div id="projects" className="cardBlock">
-            <p className="text-white letter">Projects</p>
+            <p className="text-white letter letter-tittle">Projects</p>
         </div>
     )
 }

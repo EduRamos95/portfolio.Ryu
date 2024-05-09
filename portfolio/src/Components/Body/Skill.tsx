@@ -5,7 +5,7 @@ function Skills() {
 
     return (
         <div id="skills" className="cardBlock">
-            <p className="text-white letter">Skills</p>
+            <p className="text-white letter letter-tittle">Skills</p>
             <SkillList/>
         </div>
     )
