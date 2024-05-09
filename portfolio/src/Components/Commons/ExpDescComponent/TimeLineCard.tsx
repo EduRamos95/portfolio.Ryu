@@ -1,12 +1,19 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { WorkData } from "./Exp.model";
 import './TimeLineCard.scss';
+import { duration } from "@mui/material";
 
 function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:WorkData) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [currentHeight, setCurrentHeight] = useState<number>(0);
   const ulRef = useRef<HTMLUListElement | null>(null);
-  
 
+  useEffect(()=>{
+    if (ulRef.current?.scrollHeight) {
+      setCurrentHeight(ulRef.current.scrollHeight);
+    }
+  },[isVisible])
+  
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };  
@@ -24,13 +31,11 @@ function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:
         
         <ul ref={ulRef} 
         className={`timeline-card__list ${isVisible ? 'visible' : ''}`}
-        style={
-          isVisible ?
-          {
-            height: ulRef.current?.scrollHeight + "px",
-          }:{
-            height: "0px",
-          }
+        style={{
+          height: isVisible ? currentHeight + 'px' : '0px',          
+          transitionDuration: isVisible ? '0.5s' : '0.3s',
+          transitionDelay: isVisible ? `${0}s`:`${0.3 * descriptions.length + 0.3}s` ,
+        }
         }
         >
       {descriptions.map((activity, index) => {
@@ -40,7 +45,7 @@ function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:
         return (
           <li key={`${"description"}${index}`}
           style={{
-            transitionDelay: `${reversedIndex * 0.3}s`, // Establecer un retraso escalonado para cada elemento
+            transitionDelay: `${reversedIndex * 0.3 + 0.3}s`, // Establecer un retraso escalonado para cada elemento
             opacity: isVisible ? 1 : 0, // Establecer la opacidad según la visibilidad
           }}
           >{activity}</li>

@@ -10,12 +10,14 @@
     &__list {
         height: 0;
         overflow: hidden;
-        transition: height 1s ease; /* Transición suave de altura de 0.3 segundos */
+        transition-property: height; /* Propiedad CSS que se transicionará */
+        // transition-duration: 0.5s; /* Duración de la transición */
+        transition-timing-function: ease; /* Función de temporización de la transición */
     
         // li animation
 
         li {
-            transition: opacity 0.3s ease;
+            transition: opacity 1s ease;
         }
     }
     
