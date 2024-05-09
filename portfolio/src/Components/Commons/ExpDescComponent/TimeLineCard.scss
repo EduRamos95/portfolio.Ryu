@@ -1,0 +1,86 @@
+.timeline-card {
+    margin-bottom: 16px;
+    text-shadow: black 1px 0px 10px;
+
+    > * {
+        color: white;
+    }
+
+    // descriptions
+    ul {
+        list-style-type: disc;
+
+        li {
+            margin-left: 32px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    hr { 
+        border-color: #ff8b5a;
+    }
+
+    &__sup{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        &__date {
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+    }
+
+    &__job {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        // font-weight: 500;
+    }
+
+    &__stack {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        column-gap: 16px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 8px;
+            background-color: #161616;
+            color: #ff8b5a;
+        }
+
+        &__group {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px; 
+            
+            &__element {
+                height: 32px;
+                width: 32px;
+                
+                > * {
+                    height: 32px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
