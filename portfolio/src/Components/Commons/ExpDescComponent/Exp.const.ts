@@ -12,7 +12,14 @@ export const work3:WorkData = {
         "Resolví problemas en el código heredado al aplicar buenas prácticas de programación y mejorar la legibilidad del mismo.",
         "Garanticé la integridad de las funcionalidades existentes durante el proceso de mejoras."
     ],
-    stack: [IconSkill.angular]
+    stack: [
+        IconSkill.hmtl5,
+        IconSkill.css3,
+        IconSkill.sass,
+        IconSkill.bootstrap,
+        IconSkill.angular,
+        IconSkill.figma
+    ]
 }
 
 export const work2:WorkData = {
@@ -30,7 +37,8 @@ export const work2:WorkData = {
         IconSkill.angular,
         IconSkill.jasmine,
         IconSkill.java,
-        IconSkill.mongodb,
+        IconSkill.postman,
+        IconSkill.mongodb
     ]
 }
 
@@ -48,6 +56,7 @@ export const work1:WorkData = {
         IconSkill.react,
         IconSkill.nodejs,
         IconSkill.expressjs,
+        IconSkill.postman,
         IconSkill.prisma,
         IconSkill.postgresql
     ]
