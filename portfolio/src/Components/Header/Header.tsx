@@ -9,7 +9,7 @@ function Header() {
         listItem.forEach((item) => {
           item.addEventListener("mouseenter", () => {
             const { left, top, width, height } = item.getBoundingClientRect();
-            const { clientHeight, clientWidth } = item;
+            // const { clientHeight, clientWidth } = item;
     
             menuBackDrop.style.setProperty("--left", `${left}px`);
             menuBackDrop.style.setProperty("--top", `${top}px`);
@@ -18,7 +18,7 @@ function Header() {
             menuBackDrop.style.opacity = "1";
             menuBackDrop.style.visibility = "visible";
 
-            console.log("Height, Width: ", {clientHeight, clientWidth});
+            // console.log("Height, Width: ", {clientHeight, clientWidth});
           });
     
           item.addEventListener("mouseleave", () => {
@@ -58,6 +58,19 @@ function Header() {
         };
       }, []); // Asegúrate de pasar un array vacío como segundo argumento para que useEffect solo se ejecute una vez
 
+    function scrollToElement(elementId:string, event:React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+      event.preventDefault();
+      const element = document.getElementById(elementId);
+      if (element) {
+        const offset = 60; // Ajusta este valor según sea necesario
+        const elementPosition = element.offsetTop - offset;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
     return (
         <header
             id="landing-header"
@@ -75,10 +88,10 @@ function Header() {
             [&>li>a]:inline-block
             [&>li>a]:px-4
             [&>li>a]:py-2">
-            <li><a href="#about-me">ABOUT ME</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#experience">EXPERIENCE</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#about-me" onClick={(event) => scrollToElement('about-me',event)}>ABOUT ME</a></li>
+            <li><a href="#skills" onClick={(event) => scrollToElement('skills',event)}>SKILLS</a></li>
+            <li><a href="#experience" onClick={(event) => scrollToElement('experience',event)}>EXPERIENCE</a></li>
+            <li><a href="#projects" onClick={(event) => scrollToElement('projects',event)}>PROJECTS</a></li>
           </ul>
           </nav>
 
