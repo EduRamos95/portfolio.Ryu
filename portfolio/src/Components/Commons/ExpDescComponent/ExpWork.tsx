@@ -1,5 +1,6 @@
 import { WorkData, WorksExperience } from "./Exp.model";
 import TimelineCard from "./TimeLineCard";
+import './ExpWork.scss';
 
 function ExpWork({worksExp}:WorksExperience) {
 
