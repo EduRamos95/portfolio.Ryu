@@ -1,6 +1,13 @@
 .ExpWorks {
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
-    // align-items: flex-start;
+    row-gap: 16px;
+}
+
+/*desktop1*/
+@media (min-width: 1070px) {
+    .ExpWorks {
+        flex-direction: row;
+        column-gap: 24px;
+    }
 }
