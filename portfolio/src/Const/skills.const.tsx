@@ -1,6 +1,6 @@
 import { VscTerminalLinux } from "react-icons/vsc";
-import { SiAdobeillustrator, SiExpress, SiFlask, SiGnubash, SiIntellijidea, SiJasmine, SiJavascript, SiMongodb, SiMysql, SiNextdotjs, SiPostman, SiPrisma, SiReact, SiTypescript, SiVim, SiVisualstudiocode } from "react-icons/si";
-import { FaAngular, FaCss3Alt, FaFigma, FaGitAlt, FaHtml5, FaJava, FaNodeJs, FaPython } from "react-icons/fa";
+import { SiAdobeillustrator, SiExpress, SiFlask, SiGnubash, SiIntellijidea, SiJasmine, SiJavascript, SiMongodb, SiMysql, SiNextdotjs, SiPostman, SiPrisma, SiReact, SiTailwindcss, SiTypescript, SiVim, SiVisualstudiocode } from "react-icons/si";
+import { FaAngular, FaBootstrap, FaCss3Alt, FaFigma, FaGitAlt, FaHtml5, FaJava, FaNodeJs, FaPython, FaSass } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 // 26 elements
@@ -40,6 +40,9 @@ export const IconSkill = {
     git: <FaGitAlt />,
     hmtl5: <FaHtml5 />,
     css3: <FaCss3Alt />,
+    sass: <FaSass />,
+    bootstrap: <FaBootstrap />,
+    tailwind: <SiTailwindcss />,
     javascript: <SiJavascript />,
     typescript: <SiTypescript />,
     react: <SiReact />,
