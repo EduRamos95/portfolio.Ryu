@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { WorkData } from "./Exp.model";
 import './TimeLineCard.scss';
-import { duration } from "@mui/material";
 
 function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:WorkData) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
