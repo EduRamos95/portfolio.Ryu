@@ -2,11 +2,14 @@ import { VscTerminalLinux } from "react-icons/vsc";
 import { SiAdobeillustrator, SiExpress, SiFlask, SiGnubash, SiIntellijidea, SiJasmine, SiJavascript, SiMongodb, SiMysql, SiNextdotjs, SiPostman, SiPrisma, SiReact, SiTailwindcss, SiTypescript, SiVim, SiVisualstudiocode } from "react-icons/si";
 import { FaAngular, FaBootstrap, FaCss3Alt, FaFigma, FaGitAlt, FaHtml5, FaJava, FaNodeJs, FaPython, FaSass } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
+import Cprograming from "./Cprograming";
 
 // 26 elements
 export const allSkills:JSX.Element[] = [
+
     <SiGnubash />,
     <VscTerminalLinux />,
+    <Cprograming/>,
     <FaGitAlt />,
     <FaHtml5 />,
     <FaCss3Alt />,
@@ -38,7 +41,7 @@ export const IconSkill = {
     bash: <SiGnubash />,
     linux: <VscTerminalLinux />,
     git: <FaGitAlt />,
-    hmtl5: <FaHtml5 />,
+    html5: <FaHtml5 />,
     css3: <FaCss3Alt />,
     sass: <FaSass />,
     bootstrap: <FaBootstrap />,
@@ -48,6 +51,7 @@ export const IconSkill = {
     react: <SiReact />,
     angular: <FaAngular />,
     nextjs: <SiNextdotjs />,
+    c: <Cprograming/>,
     python: <FaPython />,
     java: <FaJava />,
     prisma: <SiPrisma />,
@@ -64,4 +68,37 @@ export const IconSkill = {
     vscode: <SiVisualstudiocode />,
     intellijidea: <SiIntellijidea />,
     jasmine: <SiJasmine />
+};
+
+export const NameSkill = {
+    bash: 'Bash',
+    linux: 'Linux',
+    git: 'Git',
+    html5: 'Html5',
+    css3: 'Css3',
+    sass: 'Sass',
+    bootstrap: 'BootStrap',
+    tailwind: 'TailwindCss',
+    javascript: 'Javascript',
+    typescript: 'Typescript',
+    react: 'React',
+    angular: 'Angular',
+    nextjs: 'Next',
+    c: 'C',
+    python: 'Python',
+    java: 'Java',
+    prisma: 'Prisma',
+    nodejs: 'Node',
+    expressjs: 'Express',
+    flask: 'Flask',
+    mysql: 'MySQL',
+    postgresql: 'PostgreSQL',
+    mongodb: 'MongoDB',
+    figma: 'Figma',
+    ilustrator: 'Adobe Illustrator',
+    postman: 'Postman',
+    vim: 'Vim',
+    vscode: 'VsCode',
+    intellijidea: 'Intellij',
+    jasmine: 'Jasmine'
 };
