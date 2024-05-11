@@ -13,7 +13,7 @@ export const work3:WorkData = {
         "Garanticé la integridad de las funcionalidades existentes durante el proceso de mejoras."
     ],
     stack: [
-        IconSkill.hmtl5,
+        IconSkill.html5,
         IconSkill.css3,
         IconSkill.sass,
         IconSkill.bootstrap,
