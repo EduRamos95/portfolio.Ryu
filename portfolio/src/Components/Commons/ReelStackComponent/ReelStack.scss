@@ -1,0 +1,36 @@
+.ReelStack {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 16px;
+    margin-bottom: 16px;
+
+    p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 4px 8px;
+        border-radius: 8px;
+        background-color: #161616;
+        color: #ff8b5a;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px; 
+        
+        &__element {
+            height: 32px;
+            width: 32px;
+            
+            > * {
+                height: 32px;
+                width: 100%;
+            }
+        }
+    }
+}
