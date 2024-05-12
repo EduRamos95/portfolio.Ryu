@@ -1,6 +1,11 @@
 import { IconName } from "./ReelStack.model";
+import './ReelStack.scss';
 
-function ReelStack(stack:IconName[]) {
+interface Reel {
+    stack:IconName[]
+}
+
+function ReelStack({stack}:Reel) {
     return (
         <div className="ReelStack">
             <p>Stack:</p>
