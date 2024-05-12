@@ -8,8 +8,12 @@ export interface ProjectData {
     front: IconName[];
     back: IconName[];
     orm: IconName[];
-    db: IconName[]
+    db: IconName[];
+    img?: string[]
   }
+
+//   img: path -> public(start automatic)
+//  `public/${data}` -> only write -> `${data}`
 
 export interface ProjectExperience {
     projectsExp: ProjectData[]

@@ -57,7 +57,8 @@ export const ProjectAirBnbClone:ProjectData = {
     front: [html5, css3, javascript],
     back: [python, flask],
     orm: [],
-    db: [mysql]
+    db: [mysql],
+    img: ["AirBnb/AirBnbClone_v1.png"]
 }
 
 export const ProjectSimpleShell:ProjectData = {
@@ -70,5 +71,5 @@ export const ProjectSimpleShell:ProjectData = {
     front: [],
     back: [bash, c],
     orm: [],
-    db: []
+    db: [],
 }
