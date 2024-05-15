@@ -45,6 +45,18 @@ const vim: IconName = { name: NameSkill.vim, icon: IconSkill.vim };
 const vscode: IconName = { name: NameSkill.vscode, icon: IconSkill.vscode };
 const intellijidea: IconName = { name: NameSkill.intellijidea, icon: IconSkill.intellijidea };
 
+export const ProjectCoreCapital:ProjectData = {
+    title: 'Core Capital',
+    content: 'Desarrollo de un sistema para administrar documentos, con almacenamiento en la nube S3 Amazon',
+    github: 'https://github.com/schambig/DocumentHub',
+    demo: '',
+    descriptions: [],
+    stack: [typescript, react, nodejs, expressjs, prisma, postgresql],
+    front: [typescript, react],
+    back: [nodejs, typescript,expressjs],
+    orm: [prisma],
+    db: [postgresql],
+}
 
 export const ProjectAirBnbClone:ProjectData = {
     title: 'AirBnb Clone',
