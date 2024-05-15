@@ -1,10 +1,11 @@
-import ButtonLink, { colorBtn } from "../ButtonLinkComponent/ButtonLink";
+import IconLink from "../IconLinkComponent/IconLink";
 import ReelStack from "../ReelStackComponent/ReelStack";
 import { ProjectData } from "./ProjectCard.model";
 import "./ProjectCard.scss";
 
-const defaultImg = ["/img/defaultProject.png"];
-const base = "cardProjects";
+const defaultImg:string[] = ["/img/defaultProject.png"];
+const base:string = "cardProjects";
+let show:boolean = false;
 
 function ProjectCard({
   title,
@@ -19,14 +20,16 @@ function ProjectCard({
   db,
   img = defaultImg,
 }: ProjectData) {
+  
   const buttons = [
     { link: github, label: "GitHub" },
     { link: demo, label: "Demo" },
+    { link: "", label: "Details" },
   ];
 
-  const shouldRenderButtons = buttons.some(
-    (button) => button.link && button.link !== ""
-  );
+  function handleClick(): void {
+    show = !show;
+  }
   
   return (
     <div className="ProjectCard">
@@ -35,8 +38,16 @@ function ProjectCard({
       </div>
       <div className="ProjectCard__Content">
         <div className="ProjectCard__Content__Title">
-          <h2>{title}</h2>
+          <h2>{title}</h2> 
+          
+          <div className="ProjectCard__Content__Title__Icons">
+            <IconLink  label="GitHub" linked={github}/>
+            { demo ? (<IconLink  label="Demo" linked={demo}/>):(null)}
+            <IconLink  label="Details" click={handleClick}/>
+          </div>
+
         </div>
+          <hr></hr>
         <div className="ProjectCard__Content__Description">
           <p>{content}</p>
         </div>
@@ -48,18 +59,7 @@ function ProjectCard({
           </ul>
         </div>
       </div>
-      {shouldRenderButtons ? (
-        <div className="ProjectCard__Button">
-          {buttons.map((button, index) => (
-            <ButtonLink
-              key={index}
-              linked={button.link}
-              label={button.label}
-              color={index % 2 !== 0 ? colorBtn.primary : colorBtn.secondary}
-            />
-          ))}
-        </div>
-      ) : null}
+      
       <div className="ProjectCard__Stack">
         <ReelStack stack={stack} />
       </div>
