@@ -6,6 +6,41 @@
 
     > * {
         flex: 1 1;
-        min-width: calc((100% - 32px) / 3);
+        min-width: 280px;
     }
+}
+
+/*Mobile2*/
+@media (min-width: 375px) {
+
+}
+
+/*TableVertical*/
+@media (min-width: 768px) {
+
+}
+
+/*TableHorizontal*/
+@media (min-width: 1024px) {
+
+}
+
+/*desktop1*/
+@media (min-width: 1280px) {
+
+}
+
+/*desktop2*/
+@media (min-width: 1366px) {
+
+}
+
+/*desktop3*/
+@media (min-width: 1440px) {
+
+}
+
+/*desktop4*/
+@media (min-width: 1920px) {
+
 }
