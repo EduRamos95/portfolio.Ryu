@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { WorkData } from "./Exp.model";
 import './TimeLineCard.scss';
 
+import { TiArrowSortedDown } from "react-icons/ti";
+import { TiArrowSortedUp } from "react-icons/ti";
+
+
 function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:WorkData) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [currentHeight, setCurrentHeight] = useState<number>(0);
@@ -25,7 +29,13 @@ function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:
               <p className="timeline-card__content__sup__date">{dateStart} - {dateEnd}</p>
           </div>
           <hr />
-          <p className="timeline-card__content__job">{job}</p>
+          <p className="timeline-card__content__job">{job}
+          <span>
+          {
+            !isVisible ? (<TiArrowSortedDown />):(<TiArrowSortedUp />)
+          }  
+          </span>
+          </p>
         </div>
         
         <ul ref={ulRef} 
