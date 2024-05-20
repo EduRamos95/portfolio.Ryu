@@ -46,8 +46,10 @@ const vscode: IconName = { name: NameSkill.vscode, icon: IconSkill.vscode };
 const intellijidea: IconName = { name: NameSkill.intellijidea, icon: IconSkill.intellijidea };
 
 export const ProjectCoreCapital:ProjectData = {
-    title: 'Core Capital',
-    content: 'Desarrollo de un sistema para administrar documentos, con almacenamiento en la nube S3 Amazon',
+    // title: 'Core Capital',
+    title: 'DocuManage S3',
+    // content: 'Desarrollo de un sistema para administrar documentos, con almacenamiento en la nube S3 Amazon',
+    content: 'Development of a system to manage documents with Amazon S3 cloud storage',
     github: 'https://github.com/schambig/DocumentHub',
     demo: '',
     descriptions: [],
@@ -60,8 +62,10 @@ export const ProjectCoreCapital:ProjectData = {
 
 export const ProjectAirBnbClone:ProjectData = {
     title: 'AirBnb Clone',
-    content: `Desarrollé un clon del sitio web AirBnB desde cero.
-              El proyecto incluyó el diseño, desarrollo y despliegue de la aplicación.`,
+    // content: `Desarrollé un clon del sitio web AirBnB desde cero.
+    //           El proyecto incluyó el diseño, desarrollo y despliegue de la aplicación.`,
+    content: `I developed a clone of the AirBnB website from scratch.
+              The project included the design, development, and deployment of the application.`,
     github: 'https://github.com/EduRamos95/holbertonschool-AirBnB_clone_v4',
     demo: '',
     descriptions: [],
@@ -75,7 +79,10 @@ export const ProjectAirBnbClone:ProjectData = {
 
 export const ProjectSimpleShell:ProjectData = {
     title: 'Simple Shell',
-    content: 'Desarrollé un intérprete de línea de comandos en C que emula el shell UNIX. Admite múltiples comandos en modo interactivo y no interactivo.',
+    // content: `Desarrollé un intérprete de línea de comandos en C que emula el shell UNIX. 
+                // Admite múltiples comandos en modo interactivo y no interactivo.`,
+    content: `I developed a command-line interpreter in C that emulates the UNIX shell. 
+              It supports multiple commands in both interactive and non-interactive modes.`,
     github: 'https://github.com/EduRamos95/holbertonschool-simple_shell',
     demo: '',
     descriptions: [],

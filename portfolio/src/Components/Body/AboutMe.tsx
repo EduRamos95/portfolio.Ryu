@@ -12,7 +12,8 @@ function AboutMe() {
         
             <div className="contentBlock">
             <p className="contentBlock__Hello letter">Hi!</p>
-            <p className="contentBlock__Name letter">I'm RyuJak</p>
+            {/* <p className="contentBlock__Name letter">I'm RyuJak</p> */}
+            <p className="contentBlock__Name letter">I'm Edu R.</p>
             <p className="contentBlock__Profession letter">
                 Full-stack Developer
             </p>

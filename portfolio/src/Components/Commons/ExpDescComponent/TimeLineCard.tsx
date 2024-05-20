@@ -7,7 +7,7 @@ import { TiArrowSortedUp } from "react-icons/ti";
 
 
 function TimelineCard({ company, job, dateStart, dateEnd, descriptions, stack }:WorkData) {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const [currentHeight, setCurrentHeight] = useState<number>(0);
   const ulRef = useRef<HTMLUListElement | null>(null);
 
