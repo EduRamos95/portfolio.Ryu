@@ -18,9 +18,9 @@ function AboutMe() {
                 Full-stack Developer
             </p>
             <div className="contentBlock__Contact">
-                <div className="contentBlock__Contact__Icon"><SlSocialGithub /></div>
-                <div className="contentBlock__Contact__Icon"><SlSocialLinkedin /></div>
-                <div className="contentBlock__Contact__Icon"><FaWhatsapp /></div>
+                <a href="https://github.com/EduRamos95" target="_blank" rel="noopener noreferrer" className="contentBlock__Contact__Icon"><SlSocialGithub /></a>
+                <a href="https://www.linkedin.com/in/eduramos95/" target="_blank" rel="noopener noreferrer" className="contentBlock__Contact__Icon"><SlSocialLinkedin /></a>
+                <a href="https://wa.me/51937823875" target="_blank" rel="noopener noreferrer" className="contentBlock__Contact__Icon"><FaWhatsapp /></a>
             </div>
             <div className="contentBlock__Interview">
                 <span>Send me a Email...</span>

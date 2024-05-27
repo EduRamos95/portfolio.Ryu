@@ -21,11 +21,11 @@ function ProjectCard({
   img = defaultImg,
 }: ProjectData) {
   
-  const buttons = [
-    { link: github, label: "GitHub" },
-    { link: demo, label: "Demo" },
-    { link: "", label: "Details" },
-  ];
+  // const buttons = [
+  //   { link: github, label: "GitHub" },
+  //   { link: demo, label: "Demo" },
+  //   { link: "", label: "Details" },
+  // ];
 
   function handleClick(): void {
     show = !show;
