@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://EduRamos95.github.io/portfolio.Ryu",
+  "homepage": "http://localhost:3000/portfolio.Ryu",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

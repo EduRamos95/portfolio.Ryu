@@ -1,3 +1,5 @@
+@import "/src/Components/Commons/styles/variables.scss";
+
 .button-link {
     font-size: 1.1rem;
     font-weight: 500;
@@ -7,11 +9,11 @@
 }
 
 .primary {
-    color:#ff8b5a;
-    background-color:#161616;
+    color:$orange-primary;
+    background-color:$black-primary;
 }
 
 .secondary {
     color:#fafafa;
-    background-color:#161616;
+    background-color:$black-primary;
 }

@@ -28,12 +28,15 @@ function AboutMe() {
             </div>
 
             <div className="avatar_H">
-                <img src="svgs/zorro_v2.svg" alt="Avatar PNG" />
+                {/* <img src="/svgs/zorro_v2.svg" alt="Avatar PNG" /> */}
+                {/* <img src="svgs/zorro_v2.svg" alt="Avatar PNG" /> */}
+                <img src={`${process.env.PUBLIC_URL}/svgs/zorro_v2.svg`} alt="Avatar PNG" />
             </div>
         
         </div>
         <div className="avatar">
-          <img src="svgs/zorro_v2.svg" alt="Avatar PNG" />
+          {/* <img src="/public/svgs/zorro_v2.svg" alt="Avatar PNG" /> */}
+          <img src={`${process.env.PUBLIC_URL}/svgs/zorro_v2.svg`} alt="Avatar PNG" />
         </div>
     </div>
   );

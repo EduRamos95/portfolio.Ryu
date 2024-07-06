@@ -1,13 +1,15 @@
+@import "/src/Components/Commons/styles/variables.scss";
+
 .timeline-card {
     margin-bottom: 8px;
-    text-shadow: black 1px 0px 10px;
+    text-shadow: $text-shadow 1px 0px 10px;
     flex: 1;
 
     padding: 8px;
     border-radius: 8px;
 
     > * {
-        color: white;
+        color: $text-white;
     }
 
     &__list {
@@ -58,7 +60,7 @@
     }
 
     hr { 
-        border-color: #ff8b5a;
+        border-color: $orange-primary;
     }
     
     &__content:hover {
@@ -135,8 +137,8 @@
             font-weight: 500;
             padding: 4px 8px;
             border-radius: 8px;
-            background-color: #161616;
-            color: #ff8b5a;
+            background-color: $black-primary;
+            color: $orange-primary;
         }
 
         &__group {

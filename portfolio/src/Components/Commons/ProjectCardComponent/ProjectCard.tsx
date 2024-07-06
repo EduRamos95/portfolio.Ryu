@@ -34,7 +34,7 @@ function ProjectCard({
   return (
     <div className="ProjectCard">
       <div className="ProjectCard__Image">
-            <img src={`${base}/${img[0]}`} alt="Project PNG" />
+            <img src={`${process.env.PUBLIC_URL}/${base}/${img[0]}`} alt="Project PNG" />
       </div>
       <div className="ProjectCard__Content">
         <div className="ProjectCard__Content__Title">
