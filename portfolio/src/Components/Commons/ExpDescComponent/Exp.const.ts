@@ -1,6 +1,33 @@
 import { IconSkill } from "../../../Const/skills.const";
 import { WorkData } from "./Exp.model";
 
+export const work4:WorkData = {
+    company: "NoCountry",
+    job: "Front-End Developer",
+    dateStart: "May 2024",
+    dateEnd: "Jun 2024",
+    // descriptions: [
+    //     "Implementé las vistas de inicio de sesión, registro y reserva de cita.",
+    //     "Creé componentes reutilizables como layouts, formularios, cards de calendario, popups y loaders, mejorando la eficiencia del desarrollo en un 30%.",
+    //     "Realicé validaciones de formularios para garantizar la precisión de los datos ingresados por los usuarios.",
+    //     "Consumí APIs RESTful con HttpClientModule para integrar datos de pacientes y citas de manera fluida y segura"
+    // ],
+    descriptions: [
+        "Implemented login, registration and appointment booking views.",
+        "I created reusable components such as layouts, forms, calendar cards, popups and loaders, improving development efficiency by 30%.",
+        "Performed form validations to ensure the accuracy of data entered by users.",
+        "Consumed RESTful APIs with HttpClientModule to integrate patient and appointment data seamlessly and securely"
+    ],
+    stack: [
+        IconSkill.html5,
+        IconSkill.css3,
+        IconSkill.sass,
+        IconSkill.bootstrap,
+        IconSkill.angular,
+        IconSkill.figma
+    ]
+}
+
 export const work3:WorkData = {
     company: "DevStream",
     job: "Front-End Developer",

@@ -1,11 +1,11 @@
-import { ProjectAirBnbClone, ProjectCoreCapital, ProjectSimpleShell } from "../Commons/ProjectCardComponent/Project.const";
+import { ProjectAirBnbClone, ProjectCoreCapital, ProjectNoCountry, ProjectSimpleShell } from "../Commons/ProjectCardComponent/Project.const";
 import ProjectCard from "../Commons/ProjectCardComponent/ProjectCard";
 import { ProjectData } from "../Commons/ProjectCardComponent/ProjectCard.model";
 import '../Commons/styles/Projects.scss';
 
 function Projects() {
 
-    const ProjectsData:ProjectData[] = [ProjectCoreCapital, ProjectAirBnbClone, ProjectSimpleShell];
+    const ProjectsData:ProjectData[] = [ProjectNoCountry, ProjectCoreCapital, ProjectAirBnbClone, ProjectSimpleShell];
 
     return (
         <div id="projects" className="cardBlock">

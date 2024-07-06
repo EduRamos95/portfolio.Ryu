@@ -1,7 +1,8 @@
 @import './Components/Commons/styles/cardBlock.css';
 @import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+/* background-image: url("../public/imgs/background_dragon_1.jpeg"); */
 .App {
-    background-image: url("../public/imgs/background_dragon_1.jpeg");
+    background-image: url("../public/imgs/dragon_background_2.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;

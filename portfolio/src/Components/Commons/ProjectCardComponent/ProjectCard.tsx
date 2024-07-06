@@ -43,7 +43,7 @@ function ProjectCard({
           <div className="ProjectCard__Content__Title__Icons">
             <IconLink  label="GitHub" linked={github}/>
             { demo ? (<IconLink  label="Demo" linked={demo}/>):(null)}
-            <IconLink  label="Details" click={handleClick}/>
+            {/* <IconLink  label="Details" click={handleClick}/> */}
           </div>
 
         </div>

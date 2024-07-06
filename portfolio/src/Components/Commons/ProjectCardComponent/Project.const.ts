@@ -45,6 +45,22 @@ const vim: IconName = { name: NameSkill.vim, icon: IconSkill.vim };
 const vscode: IconName = { name: NameSkill.vscode, icon: IconSkill.vscode };
 const intellijidea: IconName = { name: NameSkill.intellijidea, icon: IconSkill.intellijidea };
 
+export const ProjectNoCountry:ProjectData = {
+    // title: 'Core Capital',
+    title: 'DocSpot',
+    // content: 'Desarrollo de un sistema para gestionar citas medicas. reserva de citas, diagnosticos, medicamentos.',
+    content: 'Development of a system to manage medical appointments. booking appointments, diagnoses, medications.',
+    github: 'https://github.com/ahuaracab/c18-39-n-java-angular',
+    demo: '',
+    descriptions: [],
+    stack: [typescript, angular, java, postgresql],
+    front: [typescript, angular],
+    back: [java],
+    orm: [],
+    db: [postgresql],
+    img: ["NoCountry/noCountry.png"]
+}
+
 export const ProjectCoreCapital:ProjectData = {
     // title: 'Core Capital',
     title: 'DocuManage S3',
