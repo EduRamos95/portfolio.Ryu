@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/portfolio.Ryu/static/css/main.7b74e2d8.css",
+    "main.js": "/portfolio.Ryu/static/js/main.aeee9c96.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio.Ryu/static/js/453.1407b060.chunk.js",
+    "static/media/dragon_background_2.jpeg": "/portfolio.Ryu/static/media/dragon_background_2.bae36b9620044ca893fb.jpeg",
+    "index.html": "/portfolio.Ryu/index.html",
+    "main.7b74e2d8.css.map": "/portfolio.Ryu/static/css/main.7b74e2d8.css.map",
+    "main.aeee9c96.js.map": "/portfolio.Ryu/static/js/main.aeee9c96.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio.Ryu/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b74e2d8.css",
+    "static/js/main.aeee9c96.js"
+  ]
+}
