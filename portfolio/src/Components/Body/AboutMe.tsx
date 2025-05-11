@@ -12,7 +12,6 @@ function AboutMe() {
         
             <div className="contentBlock">
             <p className="contentBlock__Hello letter">Hi!</p>
-            {/* <p className="contentBlock__Name letter">I'm RyuJak</p> */}
             <p className="contentBlock__Name letter">I'm Edu R.</p>
             <p className="contentBlock__Profession letter">
                 Full-stack Developer
@@ -28,14 +27,11 @@ function AboutMe() {
             </div>
 
             <div className="avatar_H">
-                {/* <img src="/svgs/zorro_v2.svg" alt="Avatar PNG" /> */}
-                {/* <img src="svgs/zorro_v2.svg" alt="Avatar PNG" /> */}
                 <img src={`${process.env.PUBLIC_URL}/svgs/zorro_v2.svg`} alt="Avatar PNG" />
             </div>
         
         </div>
         <div className="avatar">
-          {/* <img src="/public/svgs/zorro_v2.svg" alt="Avatar PNG" /> */}
           <img src={`${process.env.PUBLIC_URL}/svgs/zorro_v2.svg`} alt="Avatar PNG" />
         </div>
     </div>
