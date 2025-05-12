@@ -190,12 +190,14 @@ function App() {
           </Box>
 
           {/* Segunda pantalla */}
-          <Box sx={{ display: 'flex', flexDirection: 'row', width:'100%'}}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', gap:0.5 ,width:'100%'}}>
             <Box
               sx={{
                 height: '66vh',
                 width: '34%',
                 bgcolor: 'pink',
+                borderRadius: '32px',
+                overflow:'hidden',
               }}
             >
               Side Dish rosado (34vw, 66vh)
@@ -205,6 +207,8 @@ function App() {
                 height: '66vh',
                 width: '66%',
                 bgcolor: 'lightblue',
+                borderRadius: '32px',
+                overflow:'hidden',
               }}
             >
               Side Dish celeste (66vw, 66vh)
@@ -218,8 +222,26 @@ function App() {
               display: 'flex',
               overflowX: 'auto',
               gap: 2,
+              pb:0.5,
               // py: 1,
               // px: 2,
+              // Scrollbar fino estilo mobile
+              scrollbarWidth: 'thin', // Firefox
+              scrollbarColor: 'black transparent',
+
+              '&::-webkit-scrollbar': {
+                height: '6px', // Grosor del scrollbar horizontal
+              },
+              '&::-webkit-scrollbar-track': {
+                backgroundColor: 'transparent',
+              },
+              '&::-webkit-scrollbar-thumb': {
+                backgroundColor: '#ccc',
+                borderRadius: '9999px',
+              },
+              '&::-webkit-scrollbar-thumb:hover': {
+                backgroundColor: '#999',
+              },
             }}
           >
             {[...Array(5)].map((v, i) => (
@@ -232,6 +254,8 @@ function App() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  borderRadius: '32px',
+                  overflow:'hidden',
                 }}
               >
                 Blanco {i + 1}
