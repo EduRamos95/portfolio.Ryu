@@ -22,19 +22,6 @@ import { blue, red } from '@mui/material/colors';
 
 function App() {
 
-  const svgBg = encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 34" preserveAspectRatio="none">
-      <path fill="lightblue" d="
-        M30,0 
-        L100,0 
-        L100,34 
-        L0,34 
-        L0,17 
-        Q15,8.5 30,0 
-        Z
-      "/>
-    </svg>
-  `);
 
   return (
     // <div className="App">
@@ -48,7 +35,7 @@ function App() {
     // </div>
 
     /*
-    <Box sx={{ position: "relative", minHeight: "100vh", padding:2 }}>
+    <Box sx={{ position: "relative", minHeight: "100vh"}}>
       <Box
         sx={{ display: 'flex', flexDirection:'column',
           "::before": {
@@ -71,6 +58,13 @@ function App() {
     </Box>
     */
     <Box sx={{
+      width:'100%',
+      height: "100%",
+      backgroundImage: `url(${process.env.PUBLIC_URL}/imgs/dragon_background_2.jpeg)`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: { xs: "center", md: "top" },
+      zIndex: -1,
       padding: { xs: "16px", sm: "20px", md: "24px" },
     }}>
 
@@ -81,7 +75,9 @@ function App() {
     padding: { xs: "16px", sm: "20px", md: "24px" },
     // padding: 0,
     // margin: { xs: "16px", sm: "20px", md: "24px" },
-    backgroundColor:'gray'
+    // backgroundColor:'gray'
+    backgroundColor: 'rgba(255, 255, 255, 0.3)', // Fondo semi-transparente
+    backdropFilter: 'blur(16px)',                // Desenfoque del fondo
   }}>
 
     <Box sx={{ 
@@ -135,6 +131,8 @@ function App() {
           <Box sx={{
             height: {xs:'calc(100dvh - 104px)' ,sm:'calc(100dvh - 108px)' ,md:'calc(100dvh - 112px)' },
             minHeight: {xs:'calc(100dvh - 104px)' ,sm:'calc(100dvh - 108px)' ,md:'calc(100dvh - 112px)' },
+            borderRadius: '32px',
+            overflow:'hidden',
             position:'relative'
           }}>
             <Box sx={{ height: '100%', bgcolor: 'pink' }}>MainCourse</Box>
@@ -148,6 +146,7 @@ function App() {
               display:'flex',
               flexDirection:'column',
               justifyContent:'flex-end',
+              alignItems:'flex-end',
             }}>
               <Typography variant='h3' color='primary'
                 sx={{
@@ -158,17 +157,15 @@ function App() {
               >
                 RyuJak
               </Typography>
+              
               <Box
                 sx={{
                   padding:4,
-                  mx:2,
+                  width:'90%',
                   height: 'calc(33%)',
-                  // bgcolor: 'lightblue',
-                  // border: '1px solid black',
-                  // borderRadius: '0 30px 30px 30px',
-                  backgroundImage: `url("data:image/svg+xml,${svgBg}")`,                 
-                  backgroundSize: '100% 100%',
-                  backgroundRepeat: 'no-repeat',
+                  bgcolor: 'lightblue',
+                  border: '1px solid black',
+                  borderRadius: '30px', 
                   display:'flex',
                   flexDirection:'column',
                   alignItems:'flex-end',
