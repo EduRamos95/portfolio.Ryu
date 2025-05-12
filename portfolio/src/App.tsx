@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Presentation from './ComponentsV2/Presentation';
 import CardWrapper from './ComponentsV2/cardWrapper';
+import { blue, red } from '@mui/material/colors';
 
 // {
 //   "xs": "0px - 599px",
@@ -20,6 +21,21 @@ import CardWrapper from './ComponentsV2/cardWrapper';
 
 
 function App() {
+
+  const svgBg = encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 34" preserveAspectRatio="none">
+      <path fill="lightblue" d="
+        M30,0 
+        L100,0 
+        L100,34 
+        L0,34 
+        L0,17 
+        Q15,8.5 30,0 
+        Z
+      "/>
+    </svg>
+  `);
+
   return (
     // <div className="App">
     //   <Header/>
@@ -54,16 +70,26 @@ function App() {
       </Box>
     </Box>
     */
+    <Box sx={{
+      padding: { xs: "16px", sm: "20px", md: "24px" },
+    }}>
 
   <CardWrapper sx={{
-    height: '100vh', boxSizing: 'border-box'
+    minHeight: '100dvh',
+    height:'100%',
+    boxSizing: 'border-box',
+    padding: { xs: "16px", sm: "20px", md: "24px" },
+    // padding: 0,
+    // margin: { xs: "16px", sm: "20px", md: "24px" },
+    backgroundColor:'gray'
   }}>
 
     <Box sx={{ 
-      display: {xs:'block', md:'flex'},
-      // flexDirection:'row',
+      // display: {xs:'block', md:'flex'},
+      display:'flex',
+      flexDirection:'row',
       minHeight: '100vh',
-      width:'100%'
+      width:'100%',
     }}>
       {/* SIDEBAR */}
       <Box
@@ -78,7 +104,7 @@ function App() {
       </Box>
 
       {/* CONTENIDO PRINCIPAL */}
-      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth:0 }}>
         {/* HEADER */}
         <Box
           sx={{
@@ -98,29 +124,71 @@ function App() {
         {/* ======= MÓVIL ======= */}
         <Box
           sx={{
-            display: { xs: 'block', md: 'none' },
+            display: { xs: 'flex', md: 'none' },
+            flexDirection:'column',
+            gap: 2,
             flex: 1,
             overflowY: 'auto',
           }}
         >
           {/* Primera pantalla */}
           <Box sx={{
-            height: 'calc(100dvh - 80px)',
-            minHeight: 'calc(100dvh - 80px)',
+            height: {xs:'calc(100dvh - 104px)' ,sm:'calc(100dvh - 108px)' ,md:'calc(100dvh - 112px)' },
+            minHeight: {xs:'calc(100dvh - 104px)' ,sm:'calc(100dvh - 108px)' ,md:'calc(100dvh - 112px)' },
             position:'relative'
           }}>
             <Box sx={{ height: '100%', bgcolor: 'pink' }}>MainCourse</Box>
-            <Box
-              sx={{
-                height: '34vh',
-                width: '80%',
-                bgcolor: 'lightblue',
-                position:'absolute',
-                bottom: 0,
-                right: 0
-              }}
+
+            <Box sx={{
+              position:'absolute',
+              bottom: 0,
+              right: 0,
+              height:'100%',
+              width:'100%',
+              display:'flex',
+              flexDirection:'column',
+              justifyContent:'flex-end',
+            }}>
+              <Typography variant='h3' color='primary'
+                sx={{
+                  width:'100%',
+                  textAlign:'center',
+                  my:2,
+                }}
               >
-              Side Dish celeste (80% ancho, 1/3 altura)
+                RyuJak
+              </Typography>
+              <Box
+                sx={{
+                  padding:4,
+                  mx:2,
+                  height: 'calc(33%)',
+                  // bgcolor: 'lightblue',
+                  // border: '1px solid black',
+                  // borderRadius: '0 30px 30px 30px',
+                  backgroundImage: `url("data:image/svg+xml,${svgBg}")`,                 
+                  backgroundSize: '100% 100%',
+                  backgroundRepeat: 'no-repeat',
+                  display:'flex',
+                  flexDirection:'column',
+                  alignItems:'flex-end',
+                }}
+                >
+                  <Box sx={{
+                    width:'75%',
+                    height:'50%',
+                    backgroundColor:'red',
+                  }}>
+
+                  </Box>
+                  <Box sx={{
+                    width:'100%',
+                    height:'50%',
+                    backgroundColor:'blue',
+                  }}>
+
+                  </Box>
+              </Box>
             </Box>
           </Box>
 
@@ -153,8 +221,8 @@ function App() {
               display: 'flex',
               overflowX: 'auto',
               gap: 2,
-              py: 1,
-              px: 2,
+              // py: 1,
+              // px: 2,
             }}
           >
             {[...Array(5)].map((v, i) => (
@@ -260,10 +328,7 @@ function App() {
       </Box>
     </Box>
   </CardWrapper>
-
-
-
-
+    </Box>
 
   );
 }
