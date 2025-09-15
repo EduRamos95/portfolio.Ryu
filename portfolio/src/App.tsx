@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import Presentation from './ComponentsV2/Presentation';
 import CardWrapper from './ComponentsV2/cardWrapper';
 import { blue, red } from '@mui/material/colors';
+import Button from '@mui/material/Button';
 
 // {
 //   "xs": "0px - 599px",
@@ -133,9 +134,17 @@ function App() {
             minHeight: {xs:'calc(100dvh - 104px)' ,sm:'calc(100dvh - 108px)' ,md:'calc(100dvh - 112px)' },
             borderRadius: '32px',
             overflow:'hidden',
-            position:'relative'
+            position:'relative',
           }}>
-            <Box sx={{ height: '100%', bgcolor: 'pink' }}>MainCourse</Box>
+            <Box sx={{
+              height: '100%',
+              backgroundImage: `url(${process.env.PUBLIC_URL}/svgs/zorro_face.svg)`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: { xs: "top center", md: "top" },
+            }}>
+              MainCourse
+            </Box>
 
             <Box sx={{
               position:'absolute',
@@ -148,42 +157,122 @@ function App() {
               justifyContent:'flex-end',
               alignItems:'flex-end',
             }}>
-              <Typography variant='h3' color='primary'
-                sx={{
-                  width:'100%',
-                  textAlign:'center',
-                  my:2,
-                }}
-              >
-                RyuJak
-              </Typography>
+              <Box sx={{
+                position:'relative',
+                width:'100%',
+                zIndex:10,
+              }}>
+                <Typography variant='h2' color='primary'
+                  sx={{
+                    position:'absolute',
+                    top:0,
+                    left:0,
+                    zIndex:5,
+                    width:'100%',
+                    textAlign:'center',
+                    my:2,
+                    fontFamily: '"Wallpoet", sans-serif',
+                    WebkitTextStroke: '16px rgb(0, 0, 0)',
+                  }}
+                  >
+                  RyuJak
+                </Typography>
+                <Typography variant='h2' color='primary'
+                  sx={{
+                    position:'relative',
+                    zIndex: 10,
+                    width:'100%',
+                    textAlign:'center',
+                    my:2,
+                    fontFamily: '"Wallpoet", sans-serif',
+                  }}
+                  >
+                  RyuJak
+                </Typography>
+              </Box>
               
               <Box
                 sx={{
-                  padding:4,
-                  width:'90%',
+                  padding:2,
+                  borderRadius:2,
+                  width:'100%',
                   height: 'calc(33%)',
-                  bgcolor: 'lightblue',
-                  border: '1px solid black',
-                  borderRadius: '30px', 
+                  maxHeight: '150px',
+                  // bgcolor: 'lightblue',
+                  // border: '1px solid black',
+                  // borderRadius: '30px',
+                  backgroundColor: 'primary.main',
+                  WebkitMaskImage: `url("${process.env.PUBLIC_URL}/svgs/maks2/div.svg")`,
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskSize: '100% 100%',
+                  WebkitMaskPosition: 'center',
+                  maskImage: `url("${process.env.PUBLIC_URL}/svgs/maks2/div.svg")`,
+                  maskRepeat: 'no-repeat',
+                  maskSize: '100% 100%',
+                  maskPosition: 'center', 
                   display:'flex',
                   flexDirection:'column',
                   alignItems:'flex-end',
                 }}
                 >
                   <Box sx={{
-                    width:'75%',
+                    width:'85%',
                     height:'50%',
-                    backgroundColor:'red',
+                    // backgroundColor:'red',
+                    display:'flex',
+                    flexDirection:'row',
+                    alignItems:'flex-start',
+                    justifyContent:'flex-end',
                   }}>
-
+                   <Typography
+                     variant='h6'
+                     sx={{
+                      textAlign: 'right'
+                     }}
+                   > 
+                   Construyo interfaces modernas
+                   </Typography>
                   </Box>
                   <Box sx={{
                     width:'100%',
                     height:'50%',
-                    backgroundColor:'blue',
+                    // backgroundColor:'blue',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'flex-end',
+                    alignItems: 'flex-end',
+                    gap:1
                   }}>
-
+                    
+                    <Button 
+                      color='primary'
+                      variant='contained'
+                      style={{
+                        borderRadius: '2rem',
+                        padding: '4px 24px',
+                        fontFamily: 'Roboto, sans-serif',
+                        textTransform: "none",
+                        fontWeight:600,
+                        letterSpacing:'2px'
+                      }}
+                    >
+                      View Projects
+                    </Button>
+                    <Button 
+                      color='primary'
+                      variant='outlined'
+                      style={{
+                        borderRadius: '2rem',
+                        padding: '4px 24px',
+                        fontFamily: 'Roboto, sans-serif',
+                        textTransform: "none",
+                        fontWeight:600,
+                        letterSpacing:'2px'
+                      }}
+                    >
+                      Contact Me
+                    </Button>
+                    
                   </Box>
               </Box>
             </Box>
