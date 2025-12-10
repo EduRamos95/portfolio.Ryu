@@ -1,120 +1,282 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+@theme {
+  /* Color definitions for Tailwind utilities */
+  --color-background: oklch(var(--background));
+  --color-foreground: oklch(var(--foreground));
+  --color-border: oklch(var(--border));
+  --color-input: oklch(var(--input));
+  --color-ring: oklch(var(--ring));
+
+  /* Primary */
+  --color-primary: oklch(var(--primary));
+  --color-primary-light: oklch(var(--primary-light));
+  --color-primary-dark: oklch(var(--primary-dark));
+  --color-primary-contrast: oklch(var(--primary-contrast));
+
+  /* Secondary */
+  --color-secondary: oklch(var(--secondary));
+  --color-secondary-light: oklch(var(--secondary-light));
+  --color-secondary-dark: oklch(var(--secondary-dark));
+  --color-secondary-contrast: oklch(var(--secondary-contrast));
+
+  /* Error */
+  --color-error: oklch(var(--error));
+  --color-error-light: oklch(var(--error-light));
+  --color-error-dark: oklch(var(--error-dark));
+  --color-error-contrast: oklch(var(--error-contrast));
+
+  /* Warning */
+  --color-warning: oklch(var(--warning));
+  --color-warning-light: oklch(var(--warning-light));
+  --color-warning-dark: oklch(var(--warning-dark));
+  --color-warning-contrast: oklch(var(--warning-contrast));
+
+  /* Info */
+  --color-info: oklch(var(--info));
+  --color-info-light: oklch(var(--info-light));
+  --color-info-dark: oklch(var(--info-dark));
+  --color-info-contrast: oklch(var(--info-contrast));
+
+  /* Success */
+  --color-success: oklch(var(--success));
+  --color-success-light: oklch(var(--success-light));
+  --color-success-dark: oklch(var(--success-dark));
+  --color-success-contrast: oklch(var(--success-contrast));
+
+  /* Custom1 */
+  --color-custom1: oklch(var(--custom1));
+  --color-custom1-light: oklch(var(--custom1-light));
+  --color-custom1-dark: oklch(var(--custom1-dark));
+  --color-custom1-contrast: oklch(var(--custom1-contrast));
+
+  /* Custom2 */
+  --color-custom2: oklch(var(--custom2));
+  --color-custom2-light: oklch(var(--custom2-light));
+  --color-custom2-dark: oklch(var(--custom2-dark));
+  --color-custom2-contrast: oklch(var(--custom2-contrast));
+
+  /* Utility colors */
+  --color-muted: oklch(var(--muted));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+  --color-accent: oklch(var(--accent));
+  --color-accent-foreground: oklch(var(--accent-foreground));
+  --color-destructive: oklch(var(--destructive));
+  --color-destructive-foreground: oklch(var(--destructive-foreground));
+  --color-card: oklch(var(--card));
+  --color-card-foreground: oklch(var(--card-foreground));
+  --color-popover: oklch(var(--popover));
+  --color-popover-foreground: oklch(var(--popover-foreground));
 }
 
+/*
+  THEME SYSTEM - CENTRALIZED COLOR CONFIGURATION
+
+  HOW IT WORKS:
+  1. Define colors as OKLCH values (L C H format, without "oklch()")
+  2. Tailwind wraps them automatically: oklch(var(--primary) / <alpha-value>)
+  3. Change colors here → applies to ALL components
+  4. Each color has: main, light, dark, contrast
+
+  OKLCH FORMAT: L C H
+  - L (Lightness): 0 (black) to 1 (white)
+  - C (Chroma): 0 (gray) to ~0.4 (vibrant)
+  - H (Hue): 0-360 (red=0, yellow=90, green=142, cyan=180, blue=264, magenta=330)
+
+  GENERATING VARIANTS:
+  - light: Increase L by ~0.1-0.15
+  - dark: Decrease L by ~0.1-0.15
+  - contrast: Choose based on main's lightness (L < 0.5 → use white, else → use black)
+*/
+
+/* ============================================
+   LIGHT MODE (Default Theme)
+   ============================================ */
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Base colors */
+  --background: 1 0 0; /* White */
+  --foreground: 0.145 0 0; /* Almost black */
+  --border: 0.922 0 0;
+  --input: 0.922 0 0;
+  --ring: 0.708 0 0;
+
+  /* ============================================
+     PRIMARY - CHANGE THIS FOR YOUR BRAND
+     ============================================ */
+  --primary: 0.45 0.25 264; /* Blue - MAIN COLOR */
+  --primary-light: 0.6 0.22 264; /* Lighter blue (hover) - calculated: L +0.15 */
+  --primary-dark: 0.35 0.27 264; /* Darker blue (active) - calculated: L -0.1 */
+  --primary-contrast: 1 0 0; /* White text on primary - auto: L<0.5 → white */
+
+  /* ============================================
+     SECONDARY
+     ============================================ */
+  --secondary: 0.7 0.15 295; /* Purple */
+  --secondary-light: 0.8 0.13 295; /* Lighter purple (hover) */
+  --secondary-dark: 0.6 0.17 295; /* Darker purple (active) */
+  --secondary-contrast: 1 0 0; /* White text */
+
+  /* ============================================
+     ERROR / DESTRUCTIVE
+     ============================================ */
+  --error: 0.577 0.245 27.325; /* Red */
+  --error-light: 0.677 0.22 27.325;
+  --error-dark: 0.477 0.27 27.325;
+  --error-contrast: 1 0 0;
+
+  --destructive: 0.577 0.245 27.325; /* Alias for error */
+  --destructive-foreground: 1 0 0;
+
+  /* ============================================
+     WARNING
+     ============================================ */
+  --warning: 0.75 0.15 85; /* Orange */
+  --warning-light: 0.85 0.13 85;
+  --warning-dark: 0.65 0.17 85;
+  --warning-contrast: 0.145 0 0; /* Black text (warning is light) */
+
+  /* ============================================
+     INFO
+     ============================================ */
+  --info: 0.55 0.22 220; /* Cyan-blue */
+  --info-light: 0.65 0.2 220;
+  --info-dark: 0.45 0.24 220;
+  --info-contrast: 1 0 0;
+
+  /* ============================================
+     SUCCESS
+     ============================================ */
+  --success: 0.6 0.18 142; /* Green */
+  --success-light: 0.7 0.16 142;
+  --success-dark: 0.5 0.2 142;
+  --success-contrast: 1 0 0;
+
+  /* ============================================
+     CUSTOM COLORS - ADD YOUR BRAND COLORS HERE
+     ============================================ */
+  --custom1: 0.6 0.2 330; /* Pink/Magenta - Example */
+  --custom1-light: 0.7 0.18 330;
+  --custom1-dark: 0.5 0.22 330;
+  --custom1-contrast: 1 0 0;
+
+  --custom2: 0.65 0.16 160; /* Teal - Example */
+  --custom2-light: 0.75 0.14 160;
+  --custom2-dark: 0.55 0.18 160;
+  --custom2-contrast: 1 0 0;
+
+  /* Utility colors */
+  --muted: 0.97 0 0;
+  --muted-foreground: 0.556 0 0;
+  --accent: 0.97 0 0;
+  --accent-foreground: 0.205 0 0;
+  --card: 1 0 0;
+  --card-foreground: 0.145 0 0;
+  --popover: 1 0 0;
+  --popover-foreground: 0.145 0 0;
 }
 
+/* ============================================
+   DARK MODE
+   ============================================ */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Base colors - inverted */
+  --background: 0.145 0 0; /* Almost black */
+  --foreground: 0.985 0 0; /* Almost white */
+  --border: 1 0 0 / 0.1; /* Transparent white */
+  --input: 1 0 0 / 0.15;
+  --ring: 0.556 0 0;
+
+  /* ============================================
+     PRIMARY in dark mode
+     In dark mode, colors often need to be BRIGHTER for visibility
+     ============================================ */
+  --primary: 0.6 0.22 264; /* Brighter blue for dark bg */
+  --primary-light: 0.7 0.2 264; /* Even brighter (hover) */
+  --primary-dark: 0.5 0.24 264; /* Slightly darker (active) */
+  --primary-contrast: 0.145 0 0; /* Dark text on bright primary */
+
+  /* ============================================
+     SECONDARY in dark mode
+     ============================================ */
+  --secondary: 0.75 0.13 295; /* Brighter purple */
+  --secondary-light: 0.85 0.11 295;
+  --secondary-dark: 0.65 0.15 295;
+  --secondary-contrast: 0.145 0 0;
+
+  /* ============================================
+     ERROR in dark mode
+     ============================================ */
+  --error: 0.704 0.191 22.216; /* Brighter red */
+  --error-light: 0.804 0.17 22.216;
+  --error-dark: 0.604 0.21 22.216;
+  --error-contrast: 0.145 0 0;
+
+  --destructive: 0.704 0.191 22.216;
+  --destructive-foreground: 0.145 0 0;
+
+  /* ============================================
+     WARNING in dark mode
+     ============================================ */
+  --warning: 0.8 0.13 85; /* Brighter orange */
+  --warning-light: 0.9 0.11 85;
+  --warning-dark: 0.7 0.15 85;
+  --warning-contrast: 0.145 0 0;
+
+  /* ============================================
+     INFO in dark mode
+     ============================================ */
+  --info: 0.65 0.2 220; /* Brighter cyan-blue */
+  --info-light: 0.75 0.18 220;
+  --info-dark: 0.55 0.22 220;
+  --info-contrast: 0.145 0 0;
+
+  /* ============================================
+     SUCCESS in dark mode
+     ============================================ */
+  --success: 0.7 0.16 142; /* Brighter green */
+  --success-light: 0.8 0.14 142;
+  --success-dark: 0.6 0.18 142;
+  --success-contrast: 0.145 0 0;
+
+  /* ============================================
+     CUSTOM COLORS in dark mode
+     ============================================ */
+  --custom1: 0.7 0.18 330; /* Brighter pink */
+  --custom1-light: 0.8 0.16 330;
+  --custom1-dark: 0.6 0.2 330;
+  --custom1-contrast: 0.145 0 0;
+
+  --custom2: 0.7 0.14 160; /* Brighter teal */
+  --custom2-light: 0.8 0.12 160;
+  --custom2-dark: 0.6 0.16 160;
+  --custom2-contrast: 0.145 0 0;
+
+  /* Utility colors */
+  --muted: 0.269 0 0;
+  --muted-foreground: 0.708 0 0;
+  --accent: 0.269 0 0;
+  --accent-foreground: 0.985 0 0;
+  --card: 0.205 0 0;
+  --card-foreground: 0.985 0 0;
+  --popover: 0.205 0 0;
+  --popover-foreground: 0.985 0 0;
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: oklch(var(--border));
+    outline-color: oklch(var(--ring) / 0.5);
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
   }
 }
