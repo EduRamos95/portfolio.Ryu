@@ -6,7 +6,11 @@ export default {
   // In Tailwind v4, @theme directive in CSS handles all color definitions
   // No need to duplicate them here
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '475px',
+      },
+    },
   },
   plugins: [],
 } satisfies Config
