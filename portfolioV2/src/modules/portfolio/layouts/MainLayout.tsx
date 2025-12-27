@@ -28,6 +28,24 @@ export function MainLayout({
 }: MainLayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  //
+  // const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  //   e.preventDefault()
+
+  //   // Small delay to allow sheet to close
+  //   setTimeout(() => {
+  //     const element = document.querySelector(href)
+  //     if (element) {
+  //       const offset = 80
+  //       const elementPosition = element.getBoundingClientRect().top + window.scrollY - offset
+  //       window.scrollTo({
+  //         top: elementPosition,
+  //         behavior: 'smooth',
+  //       })
+  //     }
+  //   }, 300)
+  // }
+
   return (
     <div
       className={cn(
@@ -58,7 +76,7 @@ export function MainLayout({
             />
 
             {/* Content Area */}
-            <main className="flex-1 overflow-y-auto">
+            <main id="main-content" className="flex-1 overflow-y-auto">
               {children}
             </main>
           </div>

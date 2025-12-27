@@ -28,7 +28,7 @@ export function HeroSection({
     >
       {/* Background Avatar */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat bg-top-center"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${avatarImage})` }}
       />
 
@@ -88,7 +88,7 @@ export function HeroSection({
           </div>
 
           {/* CTA Buttons */}
-          <div className="w-full h-1/2 flex justify-end items-end gap-2">
+          <div className="w-full h-1/2 flex flex-col items-center justify-end gap-2 xs:flex-row xs:justify-center sm:justify-end">
             <Button
               color="secondary"
               variant="contained"

@@ -13,7 +13,7 @@ export function Portfolio() {
       {/* Mobile Layout */}
       <div className="flex flex-col gap-4 md:hidden">
         <HeroSection />
-        <AboutSection />
+        {/* <AboutSection /> */}
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
@@ -28,7 +28,7 @@ export function Portfolio() {
 
           {/* Side Panel takes 1/4 */}
           <div className="flex flex-col gap-4">
-            <AboutSection className="flex-1 p-0 max-w-none" />
+            {/* <AboutSection className="flex-1 p-0 max-w-none" /> */}
           </div>
         </div>
 

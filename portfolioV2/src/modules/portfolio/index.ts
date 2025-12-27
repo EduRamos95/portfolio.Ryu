@@ -1,4 +1,5 @@
 export { Portfolio } from './Portfolio'
+export { PortfolioV2 } from './PortfolioV2'
 export * from './layouts'
 export * from './sections'
 export * from './components'
