@@ -26,18 +26,19 @@ export function PortfolioHeader({ navItems, onMenuClick, className }: PortfolioH
   return (
     <header
       className={cn(
-        'sticky top-0 z-40 flex h-16 items-center justify-between px-4 md:px-6',
-        'bg-primary text-primary-contrast',
+        // 'sticky top-0 z-40 flex h-16 items-center justify-between px-4 md:px-6',
+        'z-40 flex h-16 items-center justify-between px-4 md:px-6 md:hidden',
+        'bg-primary text-primary-contrast rounded-full',
         className
       )}
     >
       {/* Logo / Profile */}
-      <div className="flex items-center gap-2">
-        <span className="text-lg font-semibold">Perfil</span>
-      </div>
+      {/* <div className="flex items-center gap-2"> */}
+      {/* <span className="text-lg font-semibold">Perfil</span> */}
+      {/* </div> */}
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-1">
+      {/* <nav className="hidden md:flex items-center gap-1">
         {navItems.map((item) => (
           <a
             key={item.href}
@@ -51,14 +52,14 @@ export function PortfolioHeader({ navItems, onMenuClick, className }: PortfolioH
             {item.label}
           </a>
         ))}
-      </nav>
+      </nav> */}
 
       {/* Mobile Menu Button */}
       <Button
         variant="text"
         color="primary"
         size="icon"
-        className="md:hidden text-primary-contrast hover:bg-primary-light"
+        className="text-primary-contrast hover:bg-primary-light rounded-full"
         onClick={onMenuClick}
       >
         <Menu className="h-5 w-5" />

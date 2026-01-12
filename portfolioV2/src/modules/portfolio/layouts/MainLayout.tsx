@@ -61,9 +61,9 @@ export function MainLayout({
         shadow="combined"
         radius="lg"
         padding="none"
-        className="min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-3rem)]"
+        className="min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-3rem)] overflow-visible"
       >
-        <div className="flex flex-row min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-3rem)]">
+        <div className="flex flex-row min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-3rem)] relative">
           {/* Sidebar - Desktop only */}
           <PortfolioSidebar navItems={defaultNavItems} />
 
@@ -73,6 +73,7 @@ export function MainLayout({
             <PortfolioHeader
               navItems={defaultNavItems}
               onMenuClick={() => setMobileMenuOpen(true)}
+              className="absolute top-4 right-4"
             />
 
             {/* Content Area */}

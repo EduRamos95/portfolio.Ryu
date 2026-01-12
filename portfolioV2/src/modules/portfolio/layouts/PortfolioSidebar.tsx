@@ -1,5 +1,5 @@
 import { cn } from '@/shared/utils/utils'
-import { LogoIcon } from '@/shared/components/svg'
+import { LogoIcon, MenuIcon } from '@/shared/components/svg'
 import type { NavItem } from '../types'
 
 interface PortfolioSidebarProps {
@@ -30,14 +30,13 @@ export function PortfolioSidebar({
   showLogo = true,
   onScrollToSection = defaultScrollToSection,
 }: Readonly<PortfolioSidebarProps>) {
-
   return (
     <aside
       className={cn(
-        'hidden md:flex flex-col',
+        'hidden md:flex flex-col md:h-auto',
         'w-24 min-w-[100px] bg-muted/50',
-        'border-r border-border',
-        'sticky top-0 h-screen max-h-[calc(100dvh-2rem)] md:max-h-[calc(100dvh-3rem)]',
+        'border-r border-border rounded-2xl',
+        'sticky top-0 h-full max-h-[calc(100dvh-2rem)] overflow-y-auto',
         className
       )}
     >

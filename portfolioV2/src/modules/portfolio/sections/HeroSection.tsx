@@ -7,6 +7,7 @@ interface HeroSectionProps {
   avatarImage?: string
   maskImage?: string
   className?: string
+  renderContent?: any
 }
 
 export function HeroSection({
@@ -15,7 +16,8 @@ export function HeroSection({
   avatarImage = '/assets/svgs/zorro_face.svg',
   maskImage = '/assets/svgs/masks/div.svg',
   className,
-}: HeroSectionProps) {
+  renderContent = () => {},
+}: Readonly<HeroSectionProps>) {
   return (
     <section
       id="hero"
@@ -23,51 +25,28 @@ export function HeroSection({
         'relative h-[calc(100dvh-8rem)] md:h-[calc(100dvh-10rem)]',
         'rounded-3xl overflow-hidden',
         'm-4',
+        'bg-cover bg-no-repeat',
         className
       )}
+      style={{ backgroundImage: `url(${avatarImage})` }}
     >
       {/* Background Avatar */}
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${avatarImage})` }}
-      />
+      /> */}
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-end items-end">
-        {/* Name with stroke effect */}
-        <div className="relative w-full z-10">
-          {/* Stroke layer */}
-          <h1
-            className={cn(
-              'absolute top-0 left-0 w-full text-center',
-              'text-5xl md:text-7xl font-bold text-primary my-2',
-              'font-["Wallpoet",sans-serif]'
-            )}
-            style={{
-              WebkitTextStroke: '12px black',
-            }}
-          >
-            {name}
-          </h1>
-          {/* Main text layer */}
-          <h1
-            className={cn(
-              'relative w-full text-center',
-              'text-5xl md:text-7xl font-bold text-primary my-2',
-              'font-["Wallpoet",sans-serif]'
-            )}
-          >
-            {name}
-          </h1>
-        </div>
-
+      <div className="relative  h-full inset-0 flex flex-col justify-end items-end">
+        {/*Aqui ira un render Content pasado por parametro */}
+        {renderContent?.()}
         {/* Masked Bottom Section */}
         <div
           className={cn(
             'w-full p-4 rounded-lg',
             'bg-primary',
-            'flex flex-col items-end',
-            'max-h-36'
+            'flex flex-col items-end'
+            // 'max-h-36'
           )}
           style={{
             WebkitMaskImage: `url("${maskImage}")`,
@@ -80,6 +59,33 @@ export function HeroSection({
             maskPosition: 'center',
           }}
         >
+          {/* Name with stroke effect */}
+          <div className="relative w-full z-10">
+            {/* Stroke layer */}
+            <h1
+              className={cn(
+                'absolute top-0 left-0 w-full text-center',
+                'text-5xl md:text-7xl font-bold text-primary my-2',
+                'font-["Wallpoet",sans-serif]'
+              )}
+              style={{
+                WebkitTextStroke: '12px black',
+              }}
+            >
+              {name}
+            </h1>
+            {/* Main text layer */}
+            <h1
+              className={cn(
+                'relative w-full text-center',
+                'text-5xl md:text-7xl font-bold text-primary my-2',
+                'font-["Wallpoet",sans-serif]'
+              )}
+            >
+              {name}
+            </h1>
+          </div>
+
           {/* Tagline */}
           <div className="w-[85%] h-1/2 flex items-start justify-end">
             <p className="text-lg md:text-xl text-primary-contrast text-right font-medium">
